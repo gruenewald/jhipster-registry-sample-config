@@ -13,3 +13,9 @@ jhipster:
         authentication:
             jwt:
                 secret: my-secret-token-to-change-in-production
+
+# Service Registry
+eureka:
+    client:
+        service-url:
+            defaultZone: https://admin:${jhipster.registry.password}@registry.apps.emea.vwapps.io/eureka/
