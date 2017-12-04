@@ -10,7 +10,7 @@ configserver:
 security:
     user:
         name: '{cipher}5327534e0cf95eb6ffb7b73e8506a6ce5dab9a80401e37e83cdb75e573c107c27546de0dd761e66be35237094abc2281'
-        password: '{cipher}2ad450bc8660f4399d82480d8cb1e0e103a0c2c0a8177205798b19b13b7565370b525cd37812b5e631815f4f5c751ed3'
+        password: '{cipher}267de87f5759ffc1bbfa37fa3b93c84e282fd02c8bf8711957419398b7c07bffc650ced92801fbdfa9835249bafa8573'
     oauth2:
         client:
             access-token-uri: https://porsche-roadtrip-development.eu.auth0.com/oauth/token
