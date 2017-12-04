@@ -7,15 +7,21 @@ configserver:
     name: Porsche Digital GmbH - Registry config server
     status: Connected to the JHipster Registry config server, using https://github.com/gruenewald/jhipster-registry-sample-config !
 
-# Default JWT secret token (to be changed in production!)
-jhipster:
-    security:
-        authentication:
-            jwt:
-                secret: my-secret-token-to-change-in-production
+security:
+    user:
+        name: '{cipher}5327534e0cf95eb6ffb7b73e8506a6ce5dab9a80401e37e83cdb75e573c107c27546de0dd761e66be35237094abc2281'
+        password: '{cipher}2ad450bc8660f4399d82480d8cb1e0e103a0c2c0a8177205798b19b13b7565370b525cd37812b5e631815f4f5c751ed3'
+    oauth2:
+        client:
+            access-token-uri: https://porsche-roadtrip-development.eu.auth0.com/oauth/token
+            user-authorization-uri: https://porsche-roadtrip-development.eu.auth0.com/authorize
+            client-id: '{cipher}de143a29dfe22402522e13f19488c8b88edb751d4c897e0c71cd144a1c3c452974afadf19b2d9af225e9bc4962ce53ef2122f2b6b87362fa7e06aa56228b51c5'
+            client-secret: '{cipher}954c012417c76d5ea8e0a448aac39cb288652639e80434888346e8e25359e215a9a67eac64d53538839f5e8064274466575595a93abbaf041128f273beac4579981e4aa8f222ec1156c6245d92d2dd8989f7722d857a9e6a526253c57b63aed2'
+            client-authentication-scheme: form
+        resource:
+            user-info-uri: https://porsche-roadtrip-development.eu.auth0.com/userinfo
 
-# Service Registry
 eureka:
     client:
         service-url:
-            defaultZone: https://admin:${jhipster.registry.password}@registry.apps.emea.vwapps.io/eureka/
+            defaultZone: https://${security.user.name}:${security.user.password}@registry.apps.emea.vwapps.io/eureka/
