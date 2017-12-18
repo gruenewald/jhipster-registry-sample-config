@@ -24,4 +24,4 @@ security:
 eureka:
     client:
         service-url:
-            defaultZone: https://${security.user.name}:${security.user.password}@registry.apps.emea.vwapps.io/eureka/
+            defaultZone: https://${security.user.name}:${security.user.password}@roadtrip-registry-test.apps.emea.vwapps.io/eureka/
